@@ -1,0 +1,14 @@
+div{
+    margin-top: 10%;
+    margin-left: 33% ;
+    margin-right: 33% ;
+}
+
+#barra{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }

@@ -1,0 +1,35 @@
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'busquedaProductos/style.css' %}">
+<div>
+    <p>
+        Buscar: 
+        <form>
+            <input type="search" name="busqueda" size="40" id=barra name='search'>
+            <input type="submit" value="search">
+        </form>
+    </p>
+    {% if latest_product_list %}
+    <ul>
+        <table>
+            <tr>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>Vendidos</th>
+                <th>Envio</th>
+            </tr>
+            {% for product in latest_product_list %}
+            <tr>
+                <td>{{product.name}} </td>
+                <td>{{product.price}}</td>
+                <td>{{product.soldOut}}</td>
+                <td>{{product.shipping}}</td>
+                
+            </tr>
+                {% endfor %}
+        </table>
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</div>
+    
